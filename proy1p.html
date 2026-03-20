@@ -1,121 +1,163 @@
-<Html>
-<header>   
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabla de Animales</title>
 
-  
-</header>
-  <body> 
-  <table> 
-    <style>
-      <h1 style="background-color:DodgerBlue;">Hello World</h1>
-<p style="background-color:Tomato;">Lorem ipsum...</p>
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #acb6e5);
+      margin: 0;
+      padding: 20px;
+    }
 
+    header h1 {
+      text-align: center;
+      color: #2c3e50;
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
 
-table{
-border-collapse: collapse;
-width: 100%;
-}
+    .autor {
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      color: #1f3a5f;
+    }
 
-th, td{
-border:1px solid black;
-padding:10px;
-text-align:center;
-}
+    .descripcion {
+      text-align: center;
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 30px;
+    }
 
-img{
-width:200px;
-height:200px;
-object-fit:cover;
-}
-</style>
-  <tr>
-<th>ANIMALES</th>
-    <th>DESCRIPCION</th>
-    <th>IMAGEN</th>
-  </tr>
- <tr>
-<td>
-   LEON
-</td>
-<td>
+    table {
+      width: 80%;
+      margin: auto;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
 
-  es un gran felino social, conocido por vivir en manadas en sabanas africanas 
-  y una pequeña reserva en la India. Se caracteriza por el fuerte dimorfismo sexual
-  os machos destacan por su melena y mayor tamaño (150-250 kg)
-</td>
-<td> 
-<img src=https://media.istockphoto.com/id/498194588/photo/black-mane-lion.jpg?s=1024x1024&w=is&k=20&c=DGOXQMYC6t5lKUWkjJFjfL04ZS4xg0E69IcmXGph720=
-</td>
+    thead {
+      background-color: #2c3e50;
+      color: white;
+    }
 
+    th, td {
+      padding: 15px;
+      text-align: center;
+    }
 
-  </tr>
- <tr>
-<td>
-  PUMA
-</td>
-<td>
+    th {
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
 
- El puma, también conocido como puma, pantera o león de montaña,
-es un felino elegante y poderoso, originario de diversos hábitats en América.
-</td>
-<td> 
-<img src=data:image/jpeg;base64,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
-</td>
+    td {
+      font-size: 15px;
+      color: #green;
+    }
 
-   
- 
-  </tr>
- <tr>
-<td>
-   TORTUGA
-</td>
-<td>
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
 
-es un reptil antiguo y diverso caracterizado por su caparazón óseo protector,
-  que alberga su columna vertebral,
-permitiéndole vivir en casi todos los ambientes terrestres y acuáticos 
-(excepto la Antártida) desde hace millones de años, adaptándose a dietas herbívoras, carnívoras u omnívoras y destacando por su longevidad y resistencia
-</td>
-   <img src="https://www.gob.mx/cms/uploads/image/file/282924/Tortuga1.jpg" width="200">
+    tbody tr:hover {
+      background-color: #red;
+      transition: 0.3s;
+    }
 
+    img {
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
 
-</td>
+    img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
 
-   
+<body>
 
-  </tr>
- <tr>
-<td>
-   PERRO
-</td>
-<td>
+  <header>
+    <h1>Tabla de Animales</h1>
+  </header>
 
-  es un mamífero doméstico, descendiente del lobo, conocido por su lealtad y gran inteligencia, 
-  que presenta una enorme variedad de tamaños, formas y pelajes según la raza, 
-  aunque todos comparten un agudo sentido del olfato y oído, y son animales sociales 
-</td>
-<td> 
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Golde33443.jpg" width="200">
-</td>
+  <p class="autor">ERICK ISIDORO</p>
 
-   
- </tr>
-  
+  <p class="descripcion">
+    En esta tabla presento algunos animales con su respectiva imagen y una pequeña descripción.
+  </p>
 
-  </tr>
- <tr>
-<td>
-  TORO
-</td>
-<td>
+  <table>
+    <thead>
+      <tr>
+        <th>ANIMALES</th>
+        <th>DESCRIPCIÓN</th>
+        <th>IMAGEN</th>
+      </tr>
+    </thead>
 
-  se caracterizan por luchar por el dominio de la manada,
-  lo que otorga al ganador un acceso superior a las vacas para la reproducción
-</td>
-<td> 
-<img src=data:image/jpeg;base64,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
-</td>
+    <tbody>
+      <tr>
+        <td>ZORRO</td>
+        <td>
+          Los vulpinos son mamíferos carnívoros de la familia de los cánidos, conocidos como zorros o raposas.
+        </td>
+        <td>
+          <img width="200" src="ZORRO.png" alt="Zorro">
+        </td>
+      </tr>
 
-   
- </tr>
+      <tr>
+        <td>LEÓN</td>
+        <td>
+          El león es un mamífero carnívoro de la familia de los félidos y una de las especies del género Panthera.
+        </td>
+        <td>
+          <img width="200" src="LEÓN.png" alt="León">
+        </td>
+      </tr>
 
-</Html>
+      <tr>
+        <td>IGUANA</td>
+        <td>
+          Las iguanas son reptiles de zonas tropicales de América, conocidas por su adaptación al clima cálido.
+        </td>
+        <td>
+          <img width="200" src="IGUANA.png" alt="Iguana">
+        </td>
+      </tr>
+
+      <tr>
+        <td>ARDILLA</td>
+        <td>
+          La ardilla es un pequeño roedor ágil que vive en árboles y se alimenta de nueces, semillas y frutos.
+        </td>
+        <td>
+          <img width="200" src="https://definicion.de/wp-content/uploads/2022/07/ardilla.jpg" alt="Ardilla">
+        </td>
+      </tr>
+
+      <tr>
+        <td>NUTRIA</td>
+        <td>
+          Las nutrias son mamíferos acuáticos conocidos por su habilidad para nadar y su comportamiento juguetón.
+        </td>
+        <td>
+          <img width="200" src="NUTRIA.png" alt="Nutria">
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</body>
+</html>
