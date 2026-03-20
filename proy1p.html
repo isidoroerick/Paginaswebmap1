@@ -1,163 +1,141 @@
-<!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tabla de Animales</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eaf3fb;
+  margin: 20px;
+}
 
-  <style>
-    body {
-      font-family: 'Poppins', Arial, sans-serif;
-      background: linear-gradient(135deg, #ff4d4d, #ff9999);
-      margin: 0;
-      padding: 20px;
-    }
+h1 {
+  text-align: left;
+  color: #0d47a1;
+}
 
-    header h1 {
-      text-align: center;
-      color: #8B0000;
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
+h2 {
+  text-align: left;
+  color: #1565c0;
+}
 
-    .autor {
-      text-align: center;
-      font-weight: bold;
-      font-size: 20px;
-      color: #b30000;
-    }
+p.descripcion {
+  text-align: left;
+  font-size: 16px;
+  color: #1e3a5f;
+  margin-bottom: 30px;
+}
 
-    .descripcion {
-      text-align: center;
-      font-size: 16px;
-      color: #4d0000;
-      margin-bottom: 30px;
-    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
 
-    table {
-      width: 80%;
-      margin: auto;
-      border-collapse: collapse;
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
+th {
+  background-color: #1565c0;
+  color: white;
+  padding: 10px;
+}
 
-    thead {
-      background-color: #b30000;
-      color: white;
-    }
+td {
+  padding: 10px;
+  text-align: center;
+}
 
-    th, td {
-      padding: 15px;
-      text-align: center;
-    }
+table, th, td {
+  border: 1px solid #0d47a1;
+}
 
-    th {
-      font-size: 18px;
-      letter-spacing: 1px;
-    }
+tr:nth-child(even) {
+  background-color: #e3f2fd;
+}
 
-    td {
-      font-size: 15px;
-      color: #8B0000;
-    }
-
-    tbody tr:nth-child(even) {
-      background-color: #ffe6e6;
-    }
-
-    tbody tr:hover {
-      background-color: #ffcccc;
-      transition: 0.3s;
-    }
-
-    img {
-      border-radius: 10px;
-      transition: transform 0.3s;
-    }
-
-    img:hover {
-      transform: scale(1.1);
-    }
-  </style>
+img {
+  border-radius: 10px;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Tabla de Animales</h1>
-  </header>
+<h1>Erick Isidoro García</h1>
 
-  <p class="autor">Erick Isidoro</p>
+<h2>Proyecto: Tabla de Animales</h2>
 
-  <p class="descripcion">
-    En esta tabla presento algunos animales con su respectiva imagen y una pequeña descripción.
-  </p>
+<p class="descripcion">
+Este proyecto consiste en la creación de una tabla en HTML donde se presentan diferentes animales junto con su imagen y una descripción detallada. 
+El objetivo es practicar la estructura de tablas, el uso de etiquetas básicas de HTML y la integración de imágenes dentro de una página web. 
+Además, se busca mejorar la presentación visual mediante el uso de estilos en CSS, utilizando una paleta de colores en tonos azules que hacen la página más atractiva y organizada. 
+Cada fila de la tabla representa un animal distinto, mostrando información clara y sencilla para facilitar su comprensión.
+</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th>ANIMALES</th>
-        <th>DESCRIPCIÓN</th>
-        <th>IMAGEN</th>
-      </tr>
-    </thead>
+<table>
+  <tr>
+    <th>ANIMALES</th>
+    <th>DESCRIPCIÓN</th>
+    <th>IMAGEN</th>
+  </tr>
 
-    <tbody>
-      <tr>
-        <td>ZORRO</td>
-        <td>
-          Los vulpinos son mamíferos carnívoros de la familia de los cánidos, conocidos como zorros o raposas.
-        </td>
-        <td>
-          <img width="200" src="https://upload.wikimedia.org/wikipedia/commons/1/16/2010-brown-fox.jpg" alt="Zorro">
-        </td>
-      </tr>
+  <tr>
+    <td>Iguana</td>
+    <td>
+      La iguana es un reptil herbívoro que habita principalmente en zonas tropicales.
+      Se caracteriza por su cuerpo alargado, su piel escamosa y su cresta dorsal.
+      Es excelente trepadora y suele vivir en árboles cercanos al agua.
+    </td>
+    <td>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Iguana_iguana_Portoviejo_01.jpg" width="150">
+    </td>
+  </tr>
 
-      <tr>
-        <td>LEÓN</td>
-        <td>
-          El león es un mamífero carnívoro de la familia de los félidos y una de las especies del género Panthera.
-        </td>
-        <td>
-          <img width="200" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg" alt="León">
-        </td>
-      </tr>
+  <tr>
+    <td>Serpiente</td>
+    <td>
+      La serpiente es un reptil sin extremidades que se desplaza reptando.
+      Existen muchas especies, algunas venenosas y otras no.
+      Se caracterizan por su gran flexibilidad y su capacidad para cazar presas enteras.
+    </td>
+    <td>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Snake_River_%285mb%29.jpg" width="150">
+    </td>
+  </tr>
 
-      <tr>
-        <td>IGUANA</td>
-        <td>
-          Las iguanas son reptiles de zonas tropicales de América, conocidas por su adaptación al clima cálido.
-        </td>
-        <td>
-          <img width="200" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Iguana_iguana_Portoviejo_01.jpg" alt="Iguana">
-        </td>
-      </tr>
+  <tr>
+    <td>Tiburón</td>
+    <td>
+      El tiburón es un pez cartilaginoso que habita en océanos de todo el mundo.
+      Es conocido por su agudo sentido del olfato y su papel como depredador.
+      Existen muchas especies, algunas peligrosas y otras inofensivas para el ser humano.
+    </td>
+    <td>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/White_shark.jpg" width="150">
+    </td>
+  </tr>
 
-      <tr>
-        <td>ARDILLA</td>
-        <td>
-          La ardilla es un pequeño roedor ágil que vive en árboles y se alimenta de nueces, semillas y frutos.
-        </td>
-        <td>
-          <img width="200" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Sciurus_vulgaris_close_up.jpg" alt="Ardilla">
-        </td>
-      </tr>
+  <tr>
+    <td>Burro</td>
+    <td>
+      El burro es un mamífero doméstico utilizado por el ser humano desde la antigüedad.
+      Es resistente, fuerte y capaz de cargar peso durante largos periodos.
+      Se caracteriza por sus largas orejas y su carácter tranquilo.
+    </td>
+    <td>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Donkey_1_arp_750px.jpg" width="150">
+    </td>
+  </tr>
 
-      <tr>
-        <td>NUTRIA</td>
-        <td>
-          Las nutrias son mamíferos acuáticos conocidos por su habilidad para nadar y su comportamiento juguetón.
-        </td>
-        <td>
-          <img width="200" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Otter_playing_with_a_stone.jpg" alt="Nutria">
-        </td>
-      </tr>
+  <tr>
+    <td>Pulpo</td>
+    <td>
+      El pulpo es un molusco marino con ocho tentáculos y gran inteligencia.
+      Puede cambiar de color para camuflarse y escapar de depredadores.
+      Vive en el fondo del mar y es conocido por su habilidad para resolver problemas.
+    </td>
+    <td>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Octopus2.jpg" width="150">
+    </td>
+  </tr>
 
-    </tbody>
-  </table>
+</table>
 
 </body>
 </html>
